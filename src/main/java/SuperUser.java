@@ -3,9 +3,9 @@
  */
 public class SuperUser extends User{
     public static void main(String[] args) {
+    }
 
-        public String suggestArticle() {
+    public void suggestArticle() {
 
-        }
     }
 }

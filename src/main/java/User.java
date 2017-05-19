@@ -1,19 +1,21 @@
+import java.io.IOException;
+
 /**
  * Created by MorAs on 18/05/2017.
  */
 public class User {
-    public static void main(String[] args) {
 
-        public void connectSocket() {
-            Server connectedServer = new Server();
+    private Client connectedClient;
+
+    public User() {
+        try {
+            connectedClient = new Client();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
 
-        public String sendMessage() {
-            Client connectedClient = new Client();
-        }
+    public void connected() {
 
-       /*public String receiveMessage() {
-
-        }*/
     }
 }

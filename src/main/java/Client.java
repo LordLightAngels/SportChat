@@ -11,14 +11,13 @@ public class Client {
 
     private Socket socket;
 
-    public static void main ( String[] args ) throws IOException, InterruptedException {
-        Thread.sleep ( 10000 );
-        Client client = new Client ();
-        client.socket = new Socket ( "127.0.0.1",3000 );
+    public Client() throws IOException {
+
+        socket = new Socket ( "127.0.0.1",3000 );
 
         System.out.println ("CONNECTED TO SERVER");
-        PrintWriter writer = new PrintWriter ( client.socket.getOutputStream () );
-        BufferedReader reader = new BufferedReader ( new InputStreamReader ( client.socket.getInputStream ()) );
+        PrintWriter writer = new PrintWriter ( socket.getOutputStream () );
+        BufferedReader reader = new BufferedReader ( new InputStreamReader ( socket.getInputStream ()) );
 
         for (int i = 0;i < 5; i++){
             writer.println ("client " + i );
@@ -26,7 +25,5 @@ public class Client {
             System.out.println (reader.readLine ());
         }
     }
-
-
 
 }

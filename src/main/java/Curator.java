@@ -3,17 +3,17 @@
  */
 public class Curator extends SuperUser {
     public static void main(String[] args) {
+    }
 
-        public String pushArticle() {
+    public void pushArticle() {
 
-        }
+    }
 
-        public boolean acceptArticle() {
+    public void acceptArticle() {
 
-        }
+    }
 
-        public void deleteArticle() {
+    public void deleteArticle() {
 
-        }
     }
 }
